@@ -10,6 +10,6 @@ public class ClientCController {
     public int getRandomNumber() {
 
         return (int) (Math.random() * 100);
-        
+
     }
 }

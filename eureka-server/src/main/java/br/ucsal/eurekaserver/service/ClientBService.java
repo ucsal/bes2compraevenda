@@ -1,14 +1,44 @@
 package br.ucsal.eurekaserver.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.http.HttpStatus;
 
 @Service
 public class ClientBService {
 
     @Autowired
     private RestTemplate restTemplate;
+
+    public int validateClientA() {
+
+        ResponseEntity<String> response = restTemplate.getForEntity("http://app-a/health", String.class);
+        if (response.getStatusCode() == HttpStatus.OK) {
+
+            // Se a APP A estiver ativa, retorne o resultado da chamada
+            return 0;
+        } else {
+
+            return -1;
+
+        }
+    }
+
+    public int validateClientC() {
+
+        ResponseEntity<String> response = restTemplate.getForEntity("http://app-c/health", String.class);
+        if (response.getStatusCode() == HttpStatus.OK) {
+
+            // Se a APP C estiver ativa, retorne o resultado da chamada
+            return 0;
+        } else {
+
+            return -2;
+
+        }
+    }
 
     @SuppressWarnings("null")
     public int clientBSum() {

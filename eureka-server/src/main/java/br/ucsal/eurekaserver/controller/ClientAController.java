@@ -18,4 +18,3 @@ public class ClientAController {
         return clientBService.clientBSum();
     }
 }
-
