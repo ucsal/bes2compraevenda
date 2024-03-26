@@ -15,6 +15,21 @@ public class ClientAController {
     @GetMapping("/soma")
     public int RandomNumbersSum() {
 
-        return clientBService.clientBSum();
+        int statusA = clientBService.validateClientA();
+        int statusC = clientBService.validateClientC();
+
+        if (statusA == 0 && statusC == 0) {
+
+            return clientBService.clientBSum();
+
+        } else if (statusA != 0) {
+
+            return -1;
+
+        } else {
+
+            return -2;
+
+        }
     }
 }

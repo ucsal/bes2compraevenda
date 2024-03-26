@@ -15,9 +15,11 @@ public class ClientBService {
     public int validateClientA() {
 
         ResponseEntity<String> response = restTemplate.getForEntity("http://app-a/health", String.class);
+        
         if (response.getStatusCode() == HttpStatus.OK) {
 
             return 0;
+
         } else {
 
             return -1;
@@ -28,9 +30,11 @@ public class ClientBService {
     public int validateClientC() {
 
         ResponseEntity<String> response = restTemplate.getForEntity("http://app-c/health", String.class);
+        
         if (response.getStatusCode() == HttpStatus.OK) {
 
             return 0;
+            
         } else {
 
             return -2;
