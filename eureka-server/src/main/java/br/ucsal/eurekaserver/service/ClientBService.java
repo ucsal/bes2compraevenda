@@ -17,7 +17,6 @@ public class ClientBService {
         ResponseEntity<String> response = restTemplate.getForEntity("http://app-a/health", String.class);
         if (response.getStatusCode() == HttpStatus.OK) {
 
-            // Se a APP A estiver ativa, retorne o resultado da chamada
             return 0;
         } else {
 
@@ -31,7 +30,6 @@ public class ClientBService {
         ResponseEntity<String> response = restTemplate.getForEntity("http://app-c/health", String.class);
         if (response.getStatusCode() == HttpStatus.OK) {
 
-            // Se a APP C estiver ativa, retorne o resultado da chamada
             return 0;
         } else {
 
