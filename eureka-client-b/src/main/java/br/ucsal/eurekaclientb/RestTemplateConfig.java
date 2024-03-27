@@ -1,4 +1,4 @@
-package br.ucsal.eurekaserver;
+package br.ucsal.eurekaclientb;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
