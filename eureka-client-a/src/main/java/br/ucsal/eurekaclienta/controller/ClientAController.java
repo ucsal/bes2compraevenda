@@ -11,9 +11,9 @@ public class ClientAController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @SuppressWarnings("null")
     @GetMapping("/iniciar")
-    public int callService() {
+    public Integer callService() {
+
 
         return restTemplate.getForObject("http://localhost:8081/business", Integer.class);
 
