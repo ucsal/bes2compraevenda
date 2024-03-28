@@ -1,4 +1,4 @@
-package br.ucsal.eurekaserver.controller;
+package br.ucsal.eurekaclientc.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
