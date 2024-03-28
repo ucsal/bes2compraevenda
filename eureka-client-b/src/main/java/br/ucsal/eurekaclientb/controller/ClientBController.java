@@ -1,4 +1,4 @@
-package br.ucsal.eurekaclienta.controller;
+package br.ucsal.eurekaclientb.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -6,24 +6,29 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-public class ClientAController {
+public class ClientBController {
 
     @Autowired
     private RestTemplate restTemplate;
 
     @SuppressWarnings("null")
-    @GetMapping("/iniciar")
-    public int callService() {
+    @GetMapping("/business")
+    public int sum() {
 
         int result;
 
         try {
 
-            result = restTemplate.getForObject("http://localhost:8081/business", int.class);
+            int clientCRandomNumber = restTemplate.getForObject("http://localhost:8082/numero-aleatorio",
+                    int.class);
+
+            int localRandomValue = (int) (Math.random() * 100);
+
+            result = clientCRandomNumber + localRandomValue;
 
         } catch (Exception e) {
 
-            return -1;
+            return -2;
 
         }
 
