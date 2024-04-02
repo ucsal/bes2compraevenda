@@ -17,15 +17,15 @@ Este repositório contém o código-fonte de três microserviços:
 O projeto está estruturado da seguinte forma:
 
 - **br.ucsal.eurekaserver.controller.ClientAController**: Controlador REST do serviço Client A que expõe um endpoint para obter a soma de números aleatórios.
-- **br.ucsal.eurekaserver.service.ClientBController**: Controlador REST do serviço Client B que expõe um endpoint para interagir com o Client C Service e realizar a soma de números aleatórios.
+- **br.ucsal.eurekaserver.controller.ClientBController**: Controlador REST do serviço Client B que expõe um endpoint para interagir com o Client C Service e realizar a soma de números aleatórios.
 - **br.ucsal.eurekaserver.controller.ClientCController**: Controlador REST do serviço Client C que expõe um endpoint para gerar um número aleatório.
 
 ## Pré-requisitos
 
 Certifique-se de ter instalado o seguinte software antes de executar este projeto:
 
-- Java Development Kit (JDK) 8 ou superior
-- Apache Maven
+- Java Development Kit (JDK) 21
+- - Apache Maven
 - Um servidor Eureka em execução (não fornecido neste projeto)
 
 ## Como Executar
@@ -48,16 +48,14 @@ Certifique-se de ter instalado o seguinte software antes de executar este projet
    mvn clean install
    ```
 
-4. Inicie cada um dos microserviços individualmente, seguindo a ordem: Client C Service, Client B Service e finalmente Client A Service.
+4. Inicie cada um dos microserviços individualmente, na IDE de sua escolha, seguindo a ordem: Client Server, Client A Service, Client B Service e finalmente Client C Service.
 
-5. Após iniciar todos os microserviços, você pode acessar o endpoint do Client A Service para obter a soma de números aleatórios:
+5. Após iniciar todos os microserviços, você pode acessar o endpoint do Client A Service através do Postman ou do Imsonia para obter a soma de números aleatórios:
 
    ```
    GET http://localhost:8080/iniciar
    ```
 
 ## Observações
-
-Certifique-se de que o servidor Eureka esteja em execução e devidamente configurado para permitir o registro e a descoberta dos serviços.
 
 Este projeto é apenas um exemplo básico de comunicação entre microserviços usando Spring Boot e Eureka Server, e pode ser estendido e configurado de acordo com os requisitos do projeto real.
