@@ -8,8 +8,6 @@ public class ClientCController {
 
     @GetMapping("/numero-aleatorio")
     public int getRandomNumber() {
-
         return (int) (Math.random() * 100);
-
     }
 }

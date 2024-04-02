@@ -14,25 +14,16 @@ public class ClientBController {
     @SuppressWarnings("null")
     @GetMapping("/business")
     public int sum() {
-
         int result;
 
         try {
-
             int clientCRandomNumber = restTemplate.getForObject("http://localhost:8082/numero-aleatorio",
                     int.class);
-
             int localRandomValue = (int) (Math.random() * 100);
-
             result = clientCRandomNumber + localRandomValue;
-
         } catch (Exception e) {
-
             return -2;
-
         }
-
         return result;
-
     }
 }

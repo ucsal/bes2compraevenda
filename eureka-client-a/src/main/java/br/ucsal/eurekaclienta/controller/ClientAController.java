@@ -14,20 +14,13 @@ public class ClientAController {
     @SuppressWarnings("null")
     @GetMapping("/iniciar")
     public int callService() {
-
         int result;
 
         try {
-
             result = restTemplate.getForObject("http://localhost:8081/business", int.class);
-
         } catch (Exception e) {
-
             return -1;
-
         }
-
         return result;
-
     }
 }
