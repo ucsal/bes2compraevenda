@@ -8,6 +8,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 public class EurekaClientCApplication {
 
+	// esse é o shipping service
 	public static void main(String[] args) {
 		SpringApplication.run(EurekaClientCApplication.class, args);
 	}

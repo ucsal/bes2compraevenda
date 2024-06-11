@@ -8,6 +8,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 public class EurekaClientBApplication {
 
+	// payment service aqq
+
 	public static void main(String[] args) {
 		SpringApplication.run(EurekaClientBApplication.class, args);
 	}
