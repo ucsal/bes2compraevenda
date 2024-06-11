@@ -1,4 +1,4 @@
-package br.ucsal.eurekaclienta;
+package br.ucsal.apigateway;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
