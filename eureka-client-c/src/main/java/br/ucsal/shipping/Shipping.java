@@ -1,9 +1,8 @@
-package br.ucsal.eurekaclientc;
+package br.ucsal.shipping;
 
-public class ShippingRequest {
+public class Shipping {
     private int orderId;
 
-    // Getters e Setters
     public int getOrderId() {
         return orderId;
     }

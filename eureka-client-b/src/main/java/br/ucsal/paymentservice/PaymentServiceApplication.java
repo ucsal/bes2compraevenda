@@ -1,4 +1,4 @@
-package br.ucsal.eurekaclientc;
+package br.ucsal.paymentservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,11 +6,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class EurekaClientCApplication {
+public class PaymentServiceApplication {
 
-	// esse é o shipping service
 	public static void main(String[] args) {
-		SpringApplication.run(EurekaClientCApplication.class, args);
+		SpringApplication.run(PaymentServiceApplication.class, args);
 	}
 
 }
